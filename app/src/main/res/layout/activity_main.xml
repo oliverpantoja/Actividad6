@@ -4,15 +4,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_row="00000"
+    android:layout_rowSpan="00000"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <ImageButton
+        android:id="@+id/boton1"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:background="#D50F25"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_keyboard_arrow_up_white_24dp" />
+
+    <ImageButton
+        android:id="@+id/boton3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#EEB211"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:srcCompat="@drawable/ic_keyboard_arrow_down_white_24dp" />
+
+    <ImageButton
+        android:id="@+id/boton2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="#009925"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/boton3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boton1"
+        app:srcCompat="@drawable/ic_keyboard_arrow_left_white_24dp"
+        tools:visibility="visible" />
+
+    <ImageButton
+        android:id="@+id/boton4"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="#3369E8"
+        app:layout_constraintBottom_toTopOf="@+id/boton3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boton1"
+        app:srcCompat="@drawable/ic_keyboard_arrow_right_white_24dp" />
+
+    <TextView
+        android:id="@+id/contador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#000000"
+        android:textSize="96sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
